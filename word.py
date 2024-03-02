@@ -13,27 +13,22 @@ def main():
       wordmap[word] = vecs
       line = infile.readline()
       
-  secret = random.choice(list(wordmap.keys()))
+  secret = random.choice(list(wordmap.keys())[100:1200])
   secretDists = getRecs(wordmap[secret], wordmap)
+  print('secret word is:',  secret)
   
   while True:
     guess = input("Enter word: ")
     # dist to answer
     try:
       guessVec = wordmap[guess]
-      dist = np.linalg.norm(guessVec - wordmap[secret])
       guessDists = getRecs(guessVec, wordmap)
-      rank = secretDists
-      index = np.where(secretDists[:, 0] == guess)[0]
+      value = [item for item in secretDists if item[0] == guess]
+      index = np.where(secretDists == value)
 
-      if len(index) > 0:
-    # Extract the corresponding number value from the second column
-        number = secretDists[index[0]][1]
-        print(f"Number associated with '{guess}': {number}")
-      else:
-        print(f"Word '{guess}' not found in the data.")
-
-      print("dist to answer:", dist) 
+      print("dist to answer:", value[0][1])
+      print('guess rank:', index[0][0]+1)
+      print('')
 
     except Exception as e:
       print(e)
