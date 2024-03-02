@@ -16,6 +16,8 @@ def main():
   secret = random.choice(list(wordmap.keys())[100:1200])
   secretDists = getRecs(wordmap[secret], wordmap)
   print('secret word is:',  secret)
+  print('top 10 words')
+  print(secretDists[0:9])
   
   while True:
     guess = input("Enter word: ")
