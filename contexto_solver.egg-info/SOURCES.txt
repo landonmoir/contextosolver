@@ -1,0 +1,5 @@
+setup.py
+contexto_solver.egg-info/PKG-INFO
+contexto_solver.egg-info/SOURCES.txt
+contexto_solver.egg-info/dependency_links.txt
+contexto_solver.egg-info/top_level.txt

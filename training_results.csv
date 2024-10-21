@@ -1,0 +1,5 @@
+Episode,Steps,Final_Distance,Average_Distance,Guesses,Found_Word,Secret_Word,Time,Epsilon
+1,200,15340,27068.2,200,False,latifolia,21.50371813774109,1.0
+2,200,3402,27734.515,200,False,adversus,21.513756036758423,1.0
+3,200,48662,27148.47,200,False,strategists,21.716249227523804,1.0
+4,200,3707,29652.265,200,False,crocker,21.95209312438965,1.0
